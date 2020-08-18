@@ -1,0 +1,2 @@
+rootProject.name='CaloriesManager'
+include ':app'
