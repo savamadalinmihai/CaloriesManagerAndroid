@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "441069471421",
+    "firebase_url": "https://caloriesmanager-70796.firebaseio.com",
+    "project_id": "caloriesmanager-70796",
+    "storage_bucket": "caloriesmanager-70796.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441069471421:android:3de534ec441c13f4c359d4",
+        "android_client_info": {
+          "package_name": "com.example.caloriesmanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441069471421-cqnld6neu2n8ffu8pv0uh2a7gckulf90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuWhJTsUty4mozGSk-44Q9jHb9k3trVac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441069471421-cqnld6neu2n8ffu8pv0uh2a7gckulf90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
