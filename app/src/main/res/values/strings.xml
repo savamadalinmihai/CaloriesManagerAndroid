@@ -3,4 +3,7 @@
     <string name="menu_item_home">Home</string>
     <string name="menu_item_stats">Stats</string>
     <string name="menu_item_profile">Profile</string>
+
+    <string name="facebook_app_id">687476865173283</string>
+    <string name="fb_login_protocol_scheme">fb687476865173283</string>
 </resources>

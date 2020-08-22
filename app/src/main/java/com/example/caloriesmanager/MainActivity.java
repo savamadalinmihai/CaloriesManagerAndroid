@@ -6,12 +6,18 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Animation topAnimation, bottomAnimation;
     ImageView image;
     TextView txtAppName, txtDescription;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,23 @@ public class MainActivity extends AppCompatActivity {
         image.setAnimation(topAnimation);
         txtAppName.setAnimation(bottomAnimation);
         txtDescription.setAnimation(bottomAnimation);
+
+
+//        // this checks for authentication and redirects user to home screen if authenticated
+//        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+//        if (currentUser != null) {
+//            // User is signed in, send to mainmenu
+//            Log.d(TAG, "onAuthStateChanged:signed_in:" + currentUser.getUid());
+//            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+//        } else {
+//            // User is signed out, send to register/login
+//
+//
+//            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+//        }
+
+
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
