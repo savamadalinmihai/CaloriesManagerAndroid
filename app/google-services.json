@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "441069471421-gbekq9muo694ssdmrm7ndj7lc9c5b2da.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.caloriesmanager",
+            "certificate_hash": "a6d5fdbb981346aa6c15e9534730594f6f29021e"
+          }
+        },
+        {
           "client_id": "441069471421-cqnld6neu2n8ffu8pv0uh2a7gckulf90.apps.googleusercontent.com",
           "client_type": 3
         }

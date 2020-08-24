@@ -15,7 +15,7 @@
         android:transitionName="login_screen_image_transition"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/temporary_splash_image"/>
+        android:src="@drawable/ic_logo"/>
 
     <TextView
         android:id="@+id/loginScreenText"
@@ -23,9 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello there, welcome back!"
+        android:textColor="#000000"
         android:textSize="40sp"
         android:textAlignment="center"
-        android:fontFamily="@font/finger_paint"/>
+        android:fontFamily="@font/montserrat_alternates"/>
 
     <TextView
         android:id="@+id/loginSloganText"
@@ -89,7 +90,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="GO!"
-            android:background="#000000"
+            android:onClick="loginUser"
+            android:background="#2E5182"
             android:textColor="#FFF"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp" />
@@ -100,8 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:layout_margin="5dp"
-            android:backgroundTint="#fff"
+            android:background="#E49A43"
             android:elevation="0dp"
             android:text="New User? SIGN UP!"
             android:textColor="#000"

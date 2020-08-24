@@ -8,25 +8,25 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
         android:transitionName="logo_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/temporary_splash_image" />
+        app:srcCompat="@drawable/ic_logo" />
 
     <TextView
         android:id="@+id/txtAppName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="77dp"
-        android:fontFamily="@font/finger_paint"
-        android:transitionName="logo_text"
+        android:fontFamily="@font/montserrat_alternates"
         android:text="Calorie Manager"
         android:textAlignment="center"
         android:textSize="40sp"
+        android:transitionName="logo_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -36,7 +36,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/finger_paint"
+        android:fontFamily="@font/montserrat_alternates"
         android:text="Your weight loss buddy."
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"

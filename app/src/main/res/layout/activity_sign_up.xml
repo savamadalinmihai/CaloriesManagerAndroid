@@ -14,7 +14,7 @@
          android:transitionName="signup_screen_image_transition"
          android:layout_width="100dp"
          android:layout_height="100dp"
-         android:src="@drawable/temporary_splash_image"/>
+         android:src="@drawable/ic_logo"/>
 
     <TextView
         android:id="@+id/signUpScreenText"
@@ -23,11 +23,14 @@
         android:layout_height="wrap_content"
         android:text="Welcome"
         android:textSize="30sp"
-        android:fontFamily="@font/finger_paint"
+        android:fontFamily="@font/montserrat_alternates"
+        android:textColor="#000000"
         android:layout_marginTop="10dp"
         />
 
     <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:id="@+id/signUpSloganText"
         android:transitionName="signup_slogan_text_transition"
         android:layout_width="wrap_content"
@@ -39,7 +42,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/signUpUserName"
@@ -47,7 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Username" >
+            android:hint="Username"
+            android:layout_marginBottom="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -65,7 +70,8 @@
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Password" >
+            android:hint="Password"
+            android:layout_marginBottom="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -81,7 +87,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Email" >
+            android:hint="Email"
+            android:layout_marginBottom="5dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -93,23 +100,24 @@
 
     </LinearLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signUpRegisterButton"
         android:transitionName="signup_register_button_transition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="GO"
-        android:backgroundTint="#000"
+        android:onClick="registerUser"
+        android:backgroundTint="#305581"
         android:textColor="#FFF"
         android:paddingBottom="10dp"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signUpGoBackToLoginButton"
         android:transitionName="signup_go_back_to_login_button_transition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Already have an account? Log In"
-        android:backgroundTint="#000"
+        android:backgroundTint="#E39A42"
         android:textColor="#FFF"/>
 
 
@@ -126,7 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp" />
 
 </LinearLayout>
