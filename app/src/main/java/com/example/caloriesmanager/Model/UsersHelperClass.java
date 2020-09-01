@@ -1,4 +1,4 @@
-package com.example.caloriesmanager;
+package com.example.caloriesmanager.Model;
 
 public class UsersHelperClass {
     String signUpUserName, signUpPassword, signUpEmail;

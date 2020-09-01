@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0BB600</color>
-    <color name="colorPrimaryDark">#3949AB</color>
-    <color name="colorAccent">#F4511E</color>
+    <color name="colorPrimary">#3F51B5</color>
+
+    <color name="colorPrimaryDark">#459393</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="blackTextColor">#000</color>
+
+    <color name="colorLoginPrimaryDark">#1C6A6A</color>
+
+
+    <!--colors for light mode-->
+    <color name="contentBodyColor">#602929</color>
+    <color name="contentTextColor">#020000</color>
+    <color name="imageBorderColor">#E01E7A</color>
+    <color name="miniTitle">#2A2E43</color>
 </resources>

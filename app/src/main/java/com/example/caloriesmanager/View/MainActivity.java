@@ -1,4 +1,4 @@
-package com.example.caloriesmanager;
+package com.example.caloriesmanager.View;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.caloriesmanager.R;
+import com.facebook.FacebookSdk;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -20,12 +22,18 @@ public class MainActivity extends AppCompatActivity {
     Animation topAnimation, bottomAnimation;
     ImageView image;
     TextView txtAppName, txtDescription;
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        //initialisation of Facebook SDK
+        FacebookSdk.sdkInitialize(MainActivity.this);
+
 
         //Animations
         topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation);
@@ -42,19 +50,19 @@ public class MainActivity extends AppCompatActivity {
         txtAppName.setAnimation(bottomAnimation);
         txtDescription.setAnimation(bottomAnimation);
 
-        mAuth = FirebaseAuth.getInstance();
-        new Handler().postDelayed(new Runnable() {
 
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 FirebaseUser currentUser = mAuth.getCurrentUser();
-                if (currentUser != null){
-                    Intent intent = new Intent(
-                            MainActivity.this, HomeActivity.class);
+                if (currentUser != null) {
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         }, SPLASH_SCREEN);
