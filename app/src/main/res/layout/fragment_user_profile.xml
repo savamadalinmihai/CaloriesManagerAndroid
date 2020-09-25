@@ -20,7 +20,6 @@
             android:layout_marginEnd="30dp"
             >
 
-
             <TextView
                 style="@style/viewParent.headerText"
                 android:text="Profile" />
@@ -45,7 +44,7 @@
                     android:id="@+id/profileSectionUsername"
                     style="@style/viewParent.headerText"
                     android:textSize="18sp"
-                    android:layout_toRightOf="@id/profileSectionImage"
+                    android:layout_toEndOf="@id/profileSectionImage"
                     android:layout_marginTop="20dp"/>
 
                 <TextView
@@ -79,15 +78,15 @@
             <!-- -->
             <TextView
                 style="@style/viewParent.headerText.settingsTextIcon"
-                android:text="Edit Profile"
+                android:text="Edit Body Stats"
                 app:drawableLeftCompat="@drawable/ic_edit_profile" />
 
             <!-- -->
             <TextView
                 style="@style/viewParent.headerText.settingsTextIcon"
-                android:drawableLeft="@drawable/ic_edit_password"
                 android:layout_marginTop="10dp"
-                android:text="Change Password" />
+                android:text="Change Weight Loss Plan"
+                app:drawableLeftCompat="@drawable/ic_edit_password" />
 
             <!-- -->
             <TextView
@@ -99,7 +98,13 @@
                 style="@style/settingsText"
                 android:checked="true"
                 android:drawableLeft="@drawable/ic_notifications"
-                android:text="Notifications"
+                android:text="Eating Time Alerts"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+            <Switch
+                style="@style/settingsText"
+                android:checked="true"
+                android:drawableLeft="@drawable/ic_notifications"
+                android:text="Food Input Reminders"
                 tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             <!-- -->
@@ -120,12 +125,6 @@
                 style="@style/viewParent.headerText.settingsTextIcon"
                 android:drawableLeft="@drawable/ic_logout"
                 android:text="Logout" />
-
-
-            <TextView
-                style="@style/viewParent.headerText.settingsMiniTitle"
-                android:text="App ver 2.0.1"
-                android:textAlignment="center"/>
 
         </LinearLayout>
     </LinearLayout>

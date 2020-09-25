@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CalendarView;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,25 +26,41 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class HomeActivity extends AppCompatActivity {
 
     private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
     private long mBackPressed;
 
+    // declaration of views
     BottomNavigationView fragmentSwitcher;
+    CalendarView calendarView;
+
+    // trying to use a Date object to pass to Calendar view as selected date
+    Date date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-
+        // assignment of bottomnavigationview hook
         fragmentSwitcher = findViewById(R.id.bottomNavigationView);
         fragmentSwitcher.setOnNavigationItemSelectedListener(navListener);
+
+        // this sets userhomefragment as the default selected screen when app is launched
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerFrameLayout,
                 new UserHomeFragment()).commit();
+
+        // hooking calendarview object in order to do operations on it
+        calendarView = findViewById(R.id.calendarView);
     }
 
+
+    // this method is always listening for clicks on bottomnavigationview and navigating
+    // the user to the correct fragment
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -66,6 +84,8 @@ public class HomeActivity extends AppCompatActivity {
                 }
             };
 
+    // this method overrides the default behaviour of onBackPressed, requiring the user
+    // to press the back button twice and confirming exit with a toast message
     @Override
     public void onBackPressed() {
         if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis()) {

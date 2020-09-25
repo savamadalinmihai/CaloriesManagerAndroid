@@ -1,5 +1,6 @@
 package com.example.caloriesmanager.Model;
 
+// this is the model class for the user entity
 public class UsersHelperClass {
     String signUpUserName, signUpPassword, signUpEmail;
 
